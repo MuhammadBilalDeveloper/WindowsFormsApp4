@@ -47,5 +47,17 @@ namespace WindowsFormsApp4
                 MessageBox.Show(ex.Message, "WindowsFormsApp", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+        private async Task UpdateApplicationRemoteLink()
+        {
+            var DownloadUpdateDialog = new DownloadUpdateDialog();
+            DownloadUpdateDialog.ShowDialog();
+
+        }
+
+        private async void button2_Click(object sender, EventArgs e)
+        {
+           await  UpdateApplicationRemoteLink();
+        }
+       
     }
 }
